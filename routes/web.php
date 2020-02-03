@@ -30,12 +30,4 @@ Route::resource('/genres', 'admin\GenresController');
 Route::resource('/images', 'admin\ImagesController');
 Route::resource('/booksusers', 'BookUserController');
 
-Route::any('/search',function(){
-    $q = Input::get ( 'q' );
-    $book = Book::where('book_name','LIKE','%'.$q.'%')->get();
-    if(count($book) > 0)
 
-        return view('welcome')->withDetails($book)->withQuery ( $q );
-
-    else return view ('welcome')->withMessage('No Details found. Try to search again!');
-});
