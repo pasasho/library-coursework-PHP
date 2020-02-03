@@ -17,7 +17,7 @@
                         @endif
 
                         
-                        <form method="post" action="{{url('genres')}}">
+                        <form method="post" action="{{url('authors')}}">
                             <div class="form-group row">
                                 {{csrf_field()}}
                                 <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">AuthorName</label>
